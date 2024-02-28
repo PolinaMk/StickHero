@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.game__info {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.game__score {
+  position: absolute;
+  top: 70px;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 100px;
+  border-radius: 10px;
+  background-color: rgb(0 0 0 / 0.5);
+  font-size: 40px;
+  color: #fff;
+}
+
+.btn {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.27);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.3s linear;
+  position: absolute;
+  top: 250px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.883);
+  color: rgb(209, 0, 0);
+  transition: all 0.3s linear;
+}
+
+.game__start-page {
+  padding-top: 70px;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.game__title {
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: 500;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.game__main {
+  position: relative;
+}
+
+.game__graphic {
+  position: relative;
+  right: 0px;
+  display: flex;
+  width: 90000px;
+  height: 100vh;
+  align-items: flex-end;
+  overflow-x: auto;
+  transition-duration: 500ms;
+}
+
+.game__hero {
+  width: 30px;
+  position: absolute;
+  /* left: 15px; */
+  left: 5px;
+  z-index: 3;
+  transition-duration: 500ms;
+}
+
+.game__platform {
+  position: relative;
+  bottom: 0;
+  height: 35%;
+  background-color: black;
+}
+
+.game__wood {
+  position: absolute;
+  background-color: black;
+  transform-origin: bottom;
+  width: 4px;
+  height: 0px;
+  bottom: 100%;
+  right: 0px;
+  transition-duration: 0s;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .btn {
+    top: 300px;
+  }
+
+  .game__title {
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
+
+@media (min-width: 640px) {
+  .game__main {
+    left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game__main {
+    left: 40%;
+  }
+}
